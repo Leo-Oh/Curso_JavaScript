@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let nombre = "Leonardo";
+        let apellido = "Martinez";
+        let saludo = new String("Hola Mundo");
+
+        console.log(nombre, apellido, saludo);
+        console.log(nombre.length, apellido.length, saludo.length);
+
+
+        nombre.toUpperCase();
+        apellido.toLowerCase();
+
+        saludo.includes("mundo"); //Busca si se encuentra el contenido en la variable y retorna un true
+        saludo.trigger(); //quita los espacios en blanco y limpia caracteres
+        saludo.split(" "); //cada que encuentre un espacio en vlanco lo separa y genera un arreglo
+    </script>
+</body>
+
+</html>

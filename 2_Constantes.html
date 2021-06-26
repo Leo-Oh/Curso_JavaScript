@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a;
+        const PI = 3.1416;
+        //cont NUEVE;//Las cnstantes no pueden estar vacias
+        console.log(PI);
+        //PI = 3.1415;//Las constantes no se pueden cambiar su valor
+        a = "leonardo";
+        console.log(a);
+
+        /*  
+            ---------------------------------------------------------
+            A los valores compuestos se les puede cambiar sus valores
+             a pesar de declararse como constantes.
+             *Esto se debe a que el apuntador sigue siendo el mismo.*
+            ---------------------------------------------------------
+        */
+
+        const objeto = {
+            nombre: "Leonardo",
+            edad: 35
+        }
+        const arrayColores = ["blanco", "negro", "rojo"]
+
+        console.log(objeto);
+        console.log(arrayColores);
+
+        //Agregar propiedad al objeto
+        objeto.correo = "leonardo.m2349@gmail.com";
+
+        //Agregar  al array
+        arrayColores.push("morado");
+    </script>
+
+</body>
+
+</html>

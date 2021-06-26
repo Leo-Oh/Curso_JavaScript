@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Fundamentos JavaScript </h1>
+    <script>
+        var hola = "Hola mundo" //Ambito global
+        let hello = "Hello world" //Bloque
+
+        console.log(hola);
+        console.log(hello);
+        console.log(window);
+        console.log(window.hola);
+        console.log(window.hello);
+
+        /*
+            =====================================================
+                Ejemplo con var (malas practicas)
+            =====================================================
+        */
+
+        var musica = "Rock";
+        console.log("Variable musica antes del bloque: ", musica);
+
+        {
+            var musica = "Pop";
+            console.log("Variable musica dentro del bloque: ", musica);
+        }
+        console.log("Variable musica despues del bloque: ", musica);
+
+
+        /*
+            =====================================================
+                Ejemplo con let (buenas practicas)
+            =====================================================
+        */
+
+        let musica2 = "ROCK!";
+        console.log("Variable musica antes del bloque: ", musica2);
+
+        {
+            let musica2 = "POP!";
+            console.log("Variable musica dentro del bloque: ", musica2);
+        }
+        console.log("Variable musica despues del bloque: ", musica2);
+    </script>
+</body>
+
+</html>

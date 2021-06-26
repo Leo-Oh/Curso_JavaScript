@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Funcion Delcarada
+        function funcionDeclarada() {
+            console.log("Uno");
+            console.log("Dos");
+            console.log("Tres");
+
+        }
+
+
+        //Invocación de funcion
+        funcionDeclarada();
+        funcionDeclarada();
+
+        function funcionQueDevuelveValor() {
+            console.log("Uno");
+            console.log("Dos");
+            console.log("Tres");
+
+            return "La función ah retornado una cadena de texto";
+        }
+        let valorDeFuncion = funcionQueDevuelveValor();
+        console.log(valorDeFuncion);
+
+        //Pasando parametros a funcion
+        function saludar(nombre, edad) {
+            console.log(`Hola mi nombre es ${nombre} y tengo ${edad} años.`);
+        }
+        saludar("Leonardo", 13)
+
+        function saludar(nombre = "Desconocido", edad = 0) {
+            console.log(`Hola mi nombre es ${nombre} y tengo ${edad} años.`);
+        }
+        saludar()
+
+
+
+
+        //Funciones delcaradas vs funciones expresadas
+
+        funcionDeclarada();
+
+        function funcionDeclarada() {
+            console.log("Esto es una funcion declara que puede ser invocada en cualquier parte de nuestro codigo, incluso antes de que la funcion sea declarada");
+        }
+
+        funcionDeclarada();
+
+
+
+        //Corregir error del orden de las funciones, por medio de una funcion anonima/ expresada
+        //funcionExpresada();
+
+        //Funcion anonima
+        const funcionExpresada = function() {
+            console.log("Esto es una funcion expresada, es decir, una funcion que se ha asignado como valor a una variable, si invocamos esta funcion antes de su definicion JS nos dirá ... no se puede acceder antes de inicializar la expresion ")
+        }
+
+        funcionExpresada();
+    </script>
+</body>
+
+</html>

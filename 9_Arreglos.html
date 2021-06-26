@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //EL arreglo se puede declara como constante o como lent 
+        const a = [];
+        //Puede contener varios tipos de elementos
+        const b = [1, true, "Hola", ["A", "B", "C"]];
+        console.log(a);
+        console.log(b);
+        //Devolver la longitud del arreglo
+        console.log(b.length);
+        //Imprimir elementos del arreglo por indice
+        console.log(b[2]);
+        console.log(b[0]);
+        //Imprimir elementos del arrgelo por inidice si este contiene otro arreglo
+        console.log(b[3][2]);
+
+        //Inicializa un arreglo con los valores
+        const c = Array.of("X", "Y", "Z", 9, 8, 7);
+        console.log(c);
+
+        //Crea un arreglo de 100 posiciones y lo rellena con false
+        const d = Array(100).fill(false);
+        console.log(d)
+
+        //Forma de crear un arreglo de manera antigua
+        const e = new Array();
+        console.log(e);
+
+        const f = new Array(1, 2, 3, 4, 5);
+        console.log(f);
+
+
+        const colores = ["rojo", "verde", "amarillo"];
+        console.log(colores);
+
+        colores.push("negro");
+        console.log(colores);
+
+        colores.pop();
+        console.log(colores);
+
+        colores.forEach(function(el, index) {
+            console.log(`<li id = "${index}">${el}</li>`)
+        })
+    </script>
+</body>
+
+</html>
