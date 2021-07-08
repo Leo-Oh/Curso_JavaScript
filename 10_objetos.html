@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const b={}
+        console.log(b);
+
+        const c= new Object();
+        console.log(c);
+
+        /*
+            Dentro de un objeto a las variables
+            se les va a llamar atributos/propiedades
+            y a las funciones se les llama metodos
+        */
+
+        const leonardo = {
+            nombre : "leonardo",
+            apellido : "martinez",
+            edad : 35,
+            pasatiempos: ["programar","jugar","hacer ejercicio"],
+            soltero: true,
+            contacto:{
+                email: "leonardo.m2349@ŋmail.com",
+                telefono: "27154656"
+            },
+
+            saludar: function(){
+                console.log('hola');
+            },
+
+            decirMiNombre: function(){
+                console.log(`hola me llamo ${this.nombre} ${this.apellido} y tengo ${this.edad} y me puedes contactar en ${this.contacto.email}`);
+            }
+
+        }
+
+        /*
+            Acceder a las propiedades del objeto
+        */
+
+        console.log(leonardo);
+        console.log(leonardo["nombre"]);
+        console.log(leonardo["apellido"]);
+        console.log(leonardo.edad);
+
+        //Acceder a un atributo de tipo arreglo por indice
+        console.log(leonardo.pasatiempos);
+        console.log(leonardo.pasatiempos[1]);
+
+        //Acceder a un atributo de tipo objeto
+        console.log(leonardo.contacto);
+        console.log(leonardo.contacto.email);
+    
+        //Atributo de tipo funcion
+        leonardo.saludar();
+
+        //Atributo de tipo funcion cusando "this"
+        leonardo.decirMiNombre();
+
+        //Listar las llaves/atributos del objeto
+        console.log(Object.keys(leonardo));
+
+        //Listar los valores que contiene el objeto
+        console.log(Object.values(leonardo));
+    
+        console.log(leonardo.hasOwnProperty("nombre"));
+    </script>
+</body>
+</html>
