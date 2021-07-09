@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            =========================
+                    Aritmeticos
+                    + - * / % ()
+            =========================
+        */
+       //Empieza por orden algebraico
+       let a= 5+5-10*10; 
+       console.log(a);
+        //Empieza por orden algebraico en esye caso por los parentesis
+       let b= 5+(5-10)*10;
+        console.log(b);
+        
+        //Modulo
+        //Es el residuo de una division
+       let modulo= 5%2;
+       console.log(modulo);
+
+        /*
+            ======================================
+                        Relacionales
+                 <, >, <=, >=, ==, ===, !=, !===       
+            ======================================
+        */
+
+        // ¿ 8 es mayor a 9 ?
+        console.log( 8 > 9);
+        // ¿ 9 es menor a 8 ?
+        console.log( 9 < 8);
+        // ¿8 es mayor o igual a 9 ?
+        console.log( 8 >= 9);
+         // ¿9 es menor o igual a 8 ?
+        console.log( 9 <= 8);
+        // ¿7 es menor a 7?
+        console.log( 7 < 7);
+        // ¿7 es menor o igual a 7?
+        console.log( 7 <= 7);
+
+
+        /*
+         =  --> asignacion de variable
+         == --> Comparación de valores
+         === --> Comparacion de tipo de dato y valor
+
+        */
+
+        //INCREMENTAR VARIABLES
+        
+        let i = 2;//Variable con valor inicial
+        i = i+2;
+
+        i+=3; //Incremento de la variable de 3 en 3
+        i-=2; //Decrmeento de la varibale de 2 en 2
+        i/=3; //Dividide lo que tiene la varible entre 3
+        i*=4; //Multiplica lo de la varibale por 4
+
+        i++; //Solo incrementa de 1 en 1
+        i--; //solo decrementa de 1 en 1
+    
+        /*
+          ======================================
+                        Logicos
+                ! -->  NOt : Niega, es decir lo verdadero lo vuelve falso y viceversa
+                || --> Or : Compara dos condiciones y con que una se cumpla se ejecutará
+                && ---> And : Verifica 2 o mas condiciones se cumplan
+                ======================================
+        */
+
+        console.log(!true);
+        console.log(!false);
+        console.log( (9 === 9) || ("9" === 9));
+        console.log( (9 === 9) && ("9" === 9));
+        console.log( (9 === 9) && ("9" === "9"));
+
+    </script>
+</body>
+</html>
