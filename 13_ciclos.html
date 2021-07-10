@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let contador = 0;
+
+        /*
+        Ciclo while 
+
+        se ejecuta cuando la condicion se cumple
+        */
+
+        while(contador < 10){
+            console.log("While: " + contador);
+            contador ++;
+        }
+
+        /*
+            Do while
+
+            Se ejecuta una primera vez y
+             despues pregunta si la condicion se cumple
+        */
+
+        do{
+            console.log("Do while: " + contador);
+        }while(contador < 10);
+
+
+        for (let i = 0; i < 10; i++) {
+           console.log("For: " + i);    
+        }
+
+
+        // Recorrer un arreglo con for
+        let numeros = [10,20,30,40,50];
+
+        for (let i = 0; i < numeros.length; i++) {
+           console.log("Numeros: " + numeros[i]);    
+        }
+
+        //Recorrer un objeto con for in
+        const leonardo={
+            nombre : "Leonardo",
+            apellido : "Martinez",
+            edad : 20
+        }
+        // primer atributo una llave (se puede dejar key) y segundo el objeto
+        /*
+        for (const key in leonardo) {
+            console.log(key);
+        }
+        */
+
+        //Acceder especificamente a una propiedad del objeto
+        for (const key in leonardo) {
+            console.log(`key: ${key}, value: ${leonardo[key]}`);
+        }
+
+
+
+        //Recorrer un arreglo con for of
+        for (const iterator of numeros) {
+            console.log(iterator);
+        }
+
+        //Recorrer una cadena (objeto de tipo string)
+        let cadena = "Hola mundo";
+        for (const caracter of cadena) {
+            console.log(caracter);
+        }
+    </script>
+</body>
+</html>
