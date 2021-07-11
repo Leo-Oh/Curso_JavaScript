@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let nombre = "Terry",
+            edad = 7;
+
+        const perro = {
+            nombre: nombre,
+            edad: edad,
+            ladrar: function(){
+                console.log("guauu guauu!!!");
+            }
+        }
+
+        console.log(perro);
+        perro.ladrar();
+
+        /*
+            se reutiliza la variable 
+            con los valores ya asignados
+            sin tener que volver a repetir la misma palabra como antes
+        */
+        const dog = {
+            nombre,
+            edad,
+            ladrar(){ //Nueva manera de escribir una funcion en ema script 6
+                console.log("guauuuuuu guauu guauu!!!");
+            }
+        }
+
+        console.log(dog);
+
+    </script>
+</body>
+</html>
