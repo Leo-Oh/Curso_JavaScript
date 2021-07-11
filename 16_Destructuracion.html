@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const numeros = [1,2,3];
+        //Sin utlizar destructuración
+        let uno = numeros[0],
+        dos = numeros[1],
+        tres = numeros[2];
+
+        console.log(uno,dos,tres);
+
+        //Con destructuracion
+        const [one,two,three] = numeros;
+        console.log(one,two,three);
+
+
+        /*
+            Destructuración de objeto
+        */
+        let persona ={
+            nombre : "leonardo",
+            apellido : "martinez",
+            edad : 35
+        }
+        /*
+            Importante el nombre de las variables de la destructuracion
+            deben ser igual al de los atributos del objeto a destructurar
+        */
+        let {nombre,epellido,edad} = persona;
+        console.log(nombre,apellido,edad);
+
+    </script>
+</body>
+</html>
