@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /*
+            c es un parametro rest
+            que puede o no estar
+            ademas de que puede ser inifinito
+        
+        */
+
+        function sumar (a,b, ...c){
+            let resultado = a + b;
+
+            /*
+            C va a ser un arreglo
+            for each recibe una función  que se va a ejecutar 
+            por cada elemento que provenga de c
+            */
+            c.forEach(function (n){
+                resultado +=n;
+            });
+
+            return resultado;
+        }
+
+        console.log(sumar(1,2));
+        console.log(sumar(1,2,3));
+        console.log(sumar(1,2,3,4));
+        console.log(sumar(1,2,3,4,5));
+        console.log(sumar(1,2,3,4,5,6));
+        console.log(sumar(1,2,3,4,5,6,7));
+
+
+
+
+        const arr1 = [1,2,3,4,5],
+              arr2 = [6,7,8,9,0];
+
+        console.log(arr1,arr2);
+
+        /*
+            Mezclar arreglos
+            primera forma genera un arreglo de 2 posiciones 
+            con 5 elementos (matriz de 2x5)
+        */
+        //const arr3 =  [arr1,arr2];
+        
+        //Segunda forma genera un arreglo de una sola posicion con 10 elementos
+        const arr3 =  [...arr1,...arr2];
+        console.log(arr3);
+
+    </script>
+</body>
+</html>
