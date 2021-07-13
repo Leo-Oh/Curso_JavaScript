@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            Funcion expresada, si se sube el valor genera un error
+        */
+        const saludar = function(){
+            console.log(`Hola`);
+        }
+        saludar();
+
+        /*
+            =======================================
+                    ARROW FUNCTION
+            =======================================
+        */
+
+        //Forma 1
+        const saludararrow1 = () =>{
+            console.log(`Hola Mundo`);
+        }
+        saludararrow1();
+
+        //Forma 2
+        const saludararrow2 = () => console.log(`Hola Mundo`);
+        saludararrow2();
+
+        //Pasando parametros
+            //Forma 1
+        const saludarArrowP = (nombre) => console.log(`Hola ${nombre}`);
+        saludarArrowP("leonardo");
+
+            //Forma 2 de cuando tiene 1 solo paramaetro
+        const saludarArrowP2 = nombre => console.log(`Hola ${nombre}`);
+        saludarArrowP2("leonardo");
+
+        //Arrow function que retorna en una sola linea
+        const sumar = (a,b) => a+b;
+        console.log(sumar(9,9));
+
+        //Arrow function de varias lineas
+        const functionDeVariasLineas = () =>{
+            console.log("Uno");
+            console.log("Dos");
+            console.log("Tres");
+        }
+        functionDeVariasLineas();
+
+
+        //Recorrer array de la forma tradicional
+        const numeros = [1,2,3,4,5];
+        numeros.forEach(function(elemento, index){
+            console.log(`El elemento ${elemento} esta en la posición ${index}`);
+        });
+
+        //Recorrer array con Arrow function en una sola linea
+        const numerosArrow = [1,2,3,4,5];
+        numerosArrow.forEach((e, i) => console.log(`${e} esta en la posición ${i}`));
+
+
+
+
+        /**
+         * THis Hace referencial al objeto en en el
+         * que se encuentre, en este caso la ventana del navegador
+         */
+        /*
+        function Perro(){
+            console.log(this);
+        }
+        Perro();
+        */
+
+        //THis en este caso hace referencia al objeto perro
+        const perro = {
+            nombre: "Terry",
+            ladrar: function(){
+                console.log(this);
+            }
+        }
+        perro.ladrar();
+
+
+        /*
+            La arrow function tienen la capacidad 
+            de capturar el contexto del objeto en 
+            el que se encuentrarn
+        */
+        const perro2 = {
+            nombre: "TOby",
+            ladrar: () => {
+                console.log(this);
+            }
+        }
+        perro2.ladrar();
+
+        //Otra forma de que this see mantenga en el objeto
+        const perro3 = {
+            nombre: "Terry",
+            ladrar(){
+                console.log(this);
+            }
+        }
+        perro3.ladrar();
+    </script>
+</body>
+</html>
