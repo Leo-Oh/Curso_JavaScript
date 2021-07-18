@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /*
+        POO
+        clase- modelo a seguir
+        Objetos- Es una instancia de una clase
+        Atributos- es una caracteristica o propiedad del objeto(son variables dentro de un objeto)
+        Métodos- son las acciones que un objeto puede realizar(son funciones dentro de un objeto)
+
+        */
+
+        // ===== OBJETO LITERAL =====
+
+        const animal = {
+            nombre: "Snoopy",
+            sonar(){
+                console.log("Hago sonidos por que estoy vivo");
+            }
+        }
+
+        console.log(animal);
+        
+        /*
+            La función constructora 
+                *La primera letra en mayuscula
+                *Se le pasan los parametros
+                *Lleva "this" tanto paara atributos y funciones que formen parte de ella
+                *No puede llevar arrow funcion por que el "this" seria el windows
+        */
+       //Esta funcion constructora repite las funciones cada vez que se hace una instancia
+        function Animal(nombre,genero){
+            //Atributos
+            this.nombre = nombre;
+            this.genero = genero;
+            //Metofos
+            this.sonar = function(){
+                console.log("Hago sonidos por que estoy vivo");   
+            }
+
+            this.saludar = function(){
+                console.log(`Hola me llamo ${this.nombre}`);
+            }
+        }
+
+
+        //Creando instacias
+        const snoopy = new Animal("Snoopy","Macho"),
+            lolaBunny = new Animal("LolaBunny","Hembra");
+
+            console.log(snoopy);
+            console.log(lolaBunny);
+
+            /*
+                Se estan duplicando los metodos por cada animal
+            */
+            snoopy.sonar();
+            snoopy.saludar();
+
+            lolaBunny.saludar();
+            lolaBunny.sonar();
+
+            /*
+                Función constructora donde asignamos
+                los metodos al prototipo, no a la funcion como tal
+            */
+            function Animal2(nombre,genero){
+            //Atributos
+            this.nombre = nombre;
+            this.genero = genero;
+            //Metofos
+        }
+
+        //Metodos agregados al prototipo de la funcion constructora
+        Animal.prototype.sonar = function(){
+            console.log("Hago sonidos por que estoy vivo");   
+        }
+        Animal.prototype.saludar = function(){
+            console.log(`Hola me llamo ${this.nombre}`);
+        }
+    </script>
+</body>
+</html>
