@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            Las clases no reciben parametros
+            el constructor es el que se encarga de recibir los parametros
+        */
+        class Animal{
+            /*
+                El constructor de una clase es un metodo esoecial
+                que se ejecuta en el momento de instanciar la clase.
+            */
+            constructor(nombre,genero){
+
+                //Atributos
+                this.nombre = nombre;
+                this.genero = genero;
+                //Metofos
+            }
+
+            /*
+                ============================
+                            Metodos
+                ============================
+                A diferencia de los prototipos las funciones son mas faciles de declarar
+                ademas de que al encontrarse dentro de las clses al generar una instancia 
+                no se duplican, ya que JavaScrip lo soluciona por nosotros.
+            
+            */
+
+            sonar(){
+                console.log("Hago sonidos por que estoy vivo");   
+            }
+            saludar(){
+                console.log(`Hola me llamo ${this.nombre}`);
+            }
+        }
+
+
+        const toby = new Animal("Toby","Masculono"),
+                scooby = new Animal("Scooby","Macho");
+
+            //Imprimos las instancias que son azucar sintatica.
+            console.log(toby);
+            console.log(scooby);
+
+    </script>
+</body>
+</html>
