@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+         *   En javaScrip no existen los metodos privados
+         *   todos los metodos son publicos
+         *   un metodo statico es aquel que se puede usar sin necesida de isntanciar
+        */
+        class student{
+            static presentation(){
+                console.log("Hola mi nombre es leonardo y soy estudiante de Ingenieria de software");
+            }
+
+            get getCarrera(){
+                return this.carrera;
+            }
+
+            set setCarreta(carrera){
+                this.carrera = carrera;
+            }
+        }
+
+        student.presentation();
+
+        //JavaScript trata los metodos getter & setter como un atributo, apesar de ser funciones
+        //console.log(student.getCarrera());
+        //student.setCarreta("Ing.software");
+
+        //Lo correcto seria ....
+        student.setCarreta = "Ingenieria de software";
+        console.log(student.getCarrera);
+
+    </script>
+
+</body>
+
+</html>
