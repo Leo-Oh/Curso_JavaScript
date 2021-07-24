@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(Math);
+        console.log(Math.PI);
+        /*
+            abs = valor absoluto
+            no importa si el numero es negativo o positivo
+            solo se considera la cantidad
+        */
+        console.log(Math.abs(-7.8));
+        console.log(Math.ceil(7.2));
+
+        /*
+        =================
+            Redondear
+        =================
+        */
+       //Redondear a la siguiente cantidad
+        console.log(Math.ceil(7.4));
+        //Redondear a la cantidad anterior
+        console.log(Math.floor(7.2));
+
+        //Redondear segun la mas cercana 
+        console.log(Math.round(7.6));
+        console.log(Math.round(7.4));
+
+        console.log(Math.sqrt(81));
+        console.log(Math.pow(2,5));
+        //Positivo, negativo o cero
+        console.log(Math.sign());
+
+        /*
+         ====================
+            Numeros random
+         ====================
+        */
+       //Numeros aleatorios resultado en decimales
+        console.log(Math.random());
+        //Numeros aleatorio del 0 al 1000 con decimales
+        console.log(Math.random()*1000);
+        //NUmeros aleatorios del 0 al 1000 redondeados
+        console.log(Math.round(Math.random()*1000));
+
+    </script>
+</body>
+</html>
