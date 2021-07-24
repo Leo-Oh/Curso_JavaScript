@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(Date());
+
+        let fecha = new Date();
+        console.log(fecha);
+
+        console.log(fecha.getDate());
+
+        console.log(fecha.getDay());
+        console.log(fecha.getMonth());
+        console.log(fecha.getFullYear());
+
+        console.log(fecha.getHours());
+        console.log(fecha.getMinutes());
+        console.log(fecha.getMilliseconds());
+
+        console.log(fecha.toString());
+        //Forma mas humana de mostrar la hora
+        console.log(fecha.toDateString());
+        //Hora local
+        console.log(fecha.toLocaleString());
+        console.log(fecha.toLocaleTimeString());
+
+        //Fecha y hora del meridiano 
+        console.log(fecha.getUTCDay());
+        console.log(fecha.getUTCHours());
+
+        console.log(Date.now());
+    </script>
+</body>
+</html>
