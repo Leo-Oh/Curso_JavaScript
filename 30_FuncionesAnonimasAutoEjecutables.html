@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Funcion anonima autoejecutable
+
+        (function (){
+            console.log("Primera funcion autoejecutable anonima");
+        })();
+        
+        /*
+            Es una forma modular de ocupar
+            document,windown y console en una variable
+        */
+        (function (d,w,c){
+            console.log("Segunda funcion autoejecutable anonima");
+            console.log(d);
+            console.log(w);
+            c.log("Esto es un console.log");
+            
+        })(document,window,console);
+
+
+
+        //Version clasica
+        (function (){
+            console.log("Primera funcion autoejecutable anonima");
+        })();
+
+        //La crockford (JavaScript the good parts)
+        ((function (){
+            console.log("Primera funcion autoejecutable anonima");
+        })());
+
+        //Unaria
+        +function (){
+            console.log("Primera funcion autoejecutable anonima");
+        }();
+
+        //Facebook
+        !function (){
+            console.log("Primera funcion autoejecutable anonima");
+        }();
+    </script>
+</body>
+</html>
