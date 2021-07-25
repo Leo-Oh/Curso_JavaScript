@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let cadena = "A skunk sat on a stump and thunk the stump stunk, but the stump thunk the skunk stunk.";
+
+        //Forma 1, se le pasa la palabra y una expresion , en este caso el espacio  signfica que encuentre todas y no solo la primera o bien l i para que ignore mayusculas y minusculas
+        let expReg = new RegExp("stump","ig");
+        console.log(expReg.test(cadena));//Devuelve un true o false 
+        console.log(expReg.exec(cadena));//Devuelve un objeco con mas informacion
+
+        //Forma 2 se le pasa la palabra entre slash
+        let expReg2 = /stump/ig;
+        console.log(expReg2.test(cadena));
+        console.log(expReg2.exec(cadena));
+    </script>
+</body>
+</html>
