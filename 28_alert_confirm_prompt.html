@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(window);
+        //Ventana de alerta (Un solo boton)
+        window.alert("Esto es una aleta");
+        //Ventana de confirmacion (dos botones)
+        window.confirm("Esto es una confirmacion");
+        //Venta que nos permite introducir un valor
+        window.prompt("Esto es un prompt y nos permite ingresar un valor");
+
+        //Tambien podemos simplificarlo a esto:
+        alert("Esto es una aleta");
+        confirm("Esto es una confirmacion");
+        prompt("Esto es un prompt y nos permite ingresar un valor");
+
+        let alerta = alert("Esto es una alerta"),
+        confirmacion = confirm("Esto es una confirmacion"),
+        entrada = prompt("Esto es un aviso con entrada de datos");
+
+        console.log(alerta);//Siempre será indefinido
+        console.log(confirmacion);//true/false
+        console.log(entrada);//null/valor ingresado
+
+
+    </script>
+</body>
+</html>
