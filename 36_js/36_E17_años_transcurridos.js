@@ -1,5 +1,6 @@
 const calculate_year=(fecha = undefined)=>{
     if(fecha === undefined) return console.warn("No ingresaste la fecha");
+
     if(!(fecha instanceof Date)) return console.error("El valor que ingresó no es una fecha valida");
 
     /*
