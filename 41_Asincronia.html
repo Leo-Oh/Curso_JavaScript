@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Asincronia en javaScript</h1>
+    <script>
+        console.log("Inicio");
+
+        setTimeout(()=>{
+            console.log("Ejecutando un setTimeout,esto se ejecuta una sola vez");
+        },3000);
+
+        setInterval(() => {
+            console.log("Ejecutando un setInterval,esto se ejecuta indefininidamente cada cierto intervalo de tiempo");
+        },1000);
+
+        setTimeout(()=>{
+            console.log(new Date().toLocaleTimeString());
+        },1000);
+            
+
+
+        /*
+            Pausar el temporizador con clear timeout
+        */
+
+        let temporizador = setTimeout(()=>{
+            console.log(new Date().toLocaleTimeString());
+        },1000);
+
+        clearTimeout(temporizador);
+        console.log("Despues del clearTimeout");
+
+
+        let temporizador = setInterval(()=>{
+            console.log(new Date().toLocaleTimeString());
+        },1000);
+
+        clearIntervals(temporizador);
+        console.log("Despues del clearInterval");
+
+
+
+    </script>
+</body>
+</html>
