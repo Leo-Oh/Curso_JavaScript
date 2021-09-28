@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Nuevos tipos de datos en JavaScript </h1> 
+    <script>
+       let id = "hola";
+       let id2 = "hola";
+
+       console.log( id ===  id2);
+
+    //Simbol crea un identificador unico
+
+       let sId = Symbol();
+       let sId2 = Symbol();
+
+       console.log( sId === sId2 );
+
+    //Son un tipo de dato primitivo
+
+    console.log(typeof sId,sId2);
+
+    const NAME = Symbol();
+    const GREET = Symbol("Saludar"); //Breve etiqueta
+
+    const person = {
+        [NAME] : "Leonardo" 
+    }
+
+    console.log(person);
+
+
+    //Creamos la propiedad NAME  y asingamos un valor 
+    person.NAME = "Leonardo Martinez";
+    console.log(person);
+    console.log(person.NAME);//Obtenemos el valor de la propiedad que hicimos
+    console.log(person[NAME]);//Obtenemos el valor de cuando declaramos el objeto
+
+    person[GREET] = function(){
+        console.log(`Hola`);
+    }
+
+    console.log(person);
+    person[GREET]();
+
+    for (const propiedad in person) {
+        console.log(propiedad);
+        console.log(person[propiedad]);
+    }
+
+
+    //Listar las propiedades de un simbolo
+    console.log(Object.getOwnPropertySymbols(person));
+
+    </script>
+</body>
+</html>
