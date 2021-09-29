@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let map = new Map();
+        map.set("Name: ", "Leonardo");
+        map.set("Last name: ", "Martinez");
+        map.set("Years: ", 21);
+        
+        console.log(map);
+        console.log(map.size);
+        console.log(map.has("Correo"));//Devuelve true o false si encontró la coincidencia de la llave
+        console.log(map.has("Name"));
+        console.log(map.get("Name"));
+        map.set("Name","Leonardo Martinez");
+        console.log(map.get("Name"))
+        map.delete("Last name");
+
+        for (const [key,value] of map) {
+            console.log(`Llave: ${key}, Valor: ${value}`)
+        }
+
+
+        const mapa2=new Map([
+            ["nombre","leonardo"],
+            ["apellido","martinez"],
+            ["edad",21],
+            [null,"nulo"]
+
+        ]);
+
+        console.log(mapa2);
+
+
+        const llavesMapa2 = [...mapa2.keys()];
+        const valoresMapa2 = [...mapa2.keys()];
+
+        console.log(llavesMapa2);
+        console.log(valoresMapa2)
+
+        </script>
+</body>
+</html>
