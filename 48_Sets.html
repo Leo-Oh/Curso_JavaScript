@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Nuevos tipos</h1>
+
+    <script>
+
+        //Set crea un array mejorado de valores unicos 
+        const set = new Set([1,2,3,4,4,true,false,true,{},{},"hola","HOLA"]);
+        console.log(set);
+        console.log(set.size);
+
+
+        const set2 = new Set();
+        set2.add(1);
+        set2.add(2);
+        set2.add(3);
+        set2.add(4);
+        set2.add(5);
+        set2.add(true);
+        set2.add(false);
+        set2.add(true);
+        console.log("Recorriendo set");
+
+        for(item of set){
+            console.log(item);
+        }
+
+        console.log("Recorriendo set 2")
+        set2.forEach(item =>console.log((item)));  
+        
+        let arr = Array.from(set);
+        cpnsole,log(arr);
+        console,log(arr[0]);
+        
+
+        set.delete("hola")
+        console,log(set);
+        console.log("hola");
+
+        console.log(se.has);
+    </script>
+</body>
+</html>
