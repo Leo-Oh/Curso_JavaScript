@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Weak sets and weak maps</h1>
+    <p>Mapas debiles y conjuntos debiles</p>
+    <script>
+       /*
+        *  Ya no se puede pasar los parametros al crear el objeto
+        * como se hacia en los sets
+        * 
+        * Los sets son una especie de arreglo mejorado
+        * Los maps son una especie de objetos mejorado
+        * 
+       const ws = new WeakSet([1,2,3,4,5,true,false,false,{},{},"hola"]);
+       */
+
+       const ws = new WeakSet();
+
+       let valor1 = {"Valor1": 1};
+       let valor2 = {"Valor2": 2};
+       let valor3 = {"Valor3": 3};
+
+       ws.add(valor1);
+       ws.add(valor2);
+       
+       console.log(ws); //NO contiene la propiedad size, no se pueden iterar
+
+       console.log(ws.has(valor1));
+       console.log(ws.has(valor2));
+
+       ws.delete(valor2);
+       console.log(ws);
+
+       ws.add(valor1);
+       ws.add(valor3);
+        console.log(ws);
+
+        //setInterval(() => console.log(ws),1000);
+
+        setTimeout(() => {
+            valor1 = null;
+            valor2 = null;
+            valor3 = null;
+        },5000);
+    
+        /**
+         * 
+         * Forma incorrecta de hacerlo
+         * 
+        const wm = new WeakMap([
+            ["nombre", "Terry"],
+            ["edad", 10],
+            ["animal", "perro"],
+            [null, "nulo"]
+        ]);
+
+        **/
+
+        const wm = new WeakMap();
+        let llave1 = {};
+        let llave2 = {};
+        let llave3 = {};
+
+        wm.set(llave1,1);
+        wm.set(llave2,2);
+
+        console.log(wm);
+
+        //Verificamos si contiene ...
+        console.log(wm.has(llave1)); 
+        console.log(wm.has(llave3));
+
+        //Obtenemos los calores dependiendo la llave
+        console.log(wm.get(llave1));
+        console.log(wm.get(llave2));
+        console.log(wm.get(llave3));
+        
+        wm.set(llave2,2);
+        wm.set(llave3,3);
+
+        console.log(wm);
+
+        setInterval(() => console.log(wm),1000);
+
+        //Podemos mejorar el rendimiento de nuestra aplicacion 
+        //al eliminar el contenido cuando ya no sea necesario
+        setTimeout(()=> {
+            llave1 = null;
+            llave2 = null;
+            llave3 = null;
+        },5000);
+
+    </script>
+</body>
+</html>
