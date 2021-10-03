@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log(this);
+        console.log(window);
+        console.log(this === window);
+
+        this.nombre = "Contexto Global";
+        console.log(this.nombre);
+
+        function imprimir() {
+            console.log(this.nombre);
+        }
+
+        imprimir();
+
+        const obj = {
+            nombre: "Contexto Objeto",
+            imprimir: function () {
+                console.log(this.nombre);
+            }
+        }
+
+        obj.imprimir();
+
+        const obj2 = {
+            nombre: "Contexto objeto 2",
+            imprimir: imprimir
+        }
+
+        obj2.imprimir();
+
+
+        /**
+         * La arrow function no crea un bloque de codigo 
+         * a diferenecia de las funciones anonimas
+         * 
+        */
+
+        const obj3 = {
+            nombre: "Contexto Objeto 3",
+            imprimir: () => {
+                console.log(this.nombre);
+            }
+        }
+
+        obj3.imprimir(); 
+
+        function Persona(nombre){
+            this.nombre = nombre;
+           // return console.log(this.nombre);
+
+           return function(){
+               console.log(this.nombre);
+           }
+        }
+
+        let leo = new Persona();
+
+
+        function Person(nombre){
+            const that = this;
+           // return console.log(this.nombre);
+
+           return function(){
+               console.log(that.nombre);
+           }
+        }
+
+        let leonar = new Person("Leonardo");
+
+    </script>
+</body>
+
+</html>
