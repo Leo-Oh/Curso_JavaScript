@@ -1,0 +1,11 @@
+{
+    "Cadena" : "Leonardo",
+    "numero" : "21",
+    "booleano" : "true",
+    "arreglo" : ["correr","programar","cocinar"],
+    "objeto":{
+        "twitter" : "@LeonardoMtz",
+        "email" : "leonardo.m2349@gmail.com"
+    },
+    "nulo" : null
+}
