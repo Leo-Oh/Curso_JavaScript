@@ -1,4 +1,4 @@
-$cards = document.querySelector(".cards");
+const $cards = document.querySelector(".cards");
 
 console.log($cards);
 console.log($cards.children);//Acceder a los hijos (elementos)

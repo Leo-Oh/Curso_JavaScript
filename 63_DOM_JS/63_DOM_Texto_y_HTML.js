@@ -1,6 +1,6 @@
-$whatIsDOM = document.getElementById("que-es");
+const $whatIsDOM = document.getElementById("que-es");
 
-text=`
+let text=`
     <p>
         El Modelo de Objetos del Documento(<b><i>DOM-Document Object Model</i></b>)Es una API para 
      para documentos HTML y XML

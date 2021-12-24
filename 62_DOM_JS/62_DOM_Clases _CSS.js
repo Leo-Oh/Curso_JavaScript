@@ -1,4 +1,4 @@
-$card = document.querySelector(".card");
+const $card = document.querySelector(".card");
 
 console.log($card);
 console.log($card.className); //Muestra en plain text las clases del elemento seleccionado

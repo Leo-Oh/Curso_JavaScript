@@ -1,6 +1,6 @@
 //const $linkDOM= document.querySelector(".link-dom");
 
-$linkDOM = document.querySelector('.link-dom');
+const $linkDOM = document.querySelector('.link-dom');
 
 //ES mas frecuente y nos proporciona todo
 console.log($linkDOM.style); 
@@ -35,8 +35,8 @@ console.log(getComputedStyle($linkDOM));
 
 // ====== Variables CSS-Custom Properties CSS ======
 
-$html = document.documentElement;//Representa el hml
-$body = document.body;
+const $html = document.documentElement;//Representa el hml
+let $body = document.body;
 
 varDarkColor = getComputedStyle($html).getPropertyValue("--dark-color"),
 varYellowColor = getComputedStyle($html).getPropertyValue("--yellow-color");
